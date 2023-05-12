@@ -8,7 +8,7 @@ We planned our different requests, file paths, functions required, and if we wer
 
 app.patch took us a bit longer - eventually realised we hadn't accessed the id correctly using req.params.id (!) but happy we noticed and we moved swiftly on...! app.delete took us less time and soon we were onto trying to link up the front end.
 
-We made sure to swap roles regularly - one in the 'drivier' seat sharing their screen and the other two talking through the code and helping the driver. I felt confident today to support the other two and appreciated their help - we all had a moment of realisation in the team. Mine was {} in the res.send()! Safiyah expertly spotted the .id issue and Ahia was an expert on wrangling that pesky server that kepy misbehaving.
+We made sure to swap roles regularly - one in the 'drivier' seat sharing their screen and the other two talking through the code and helping the driver. I felt confident today to support the other two and appreciated their help - we all had a moment of realisation in the team. Mine was {} in the res.send()! Safiyah expertly spotted the .id issue and Ahia was an expert on wrangling that pesky server that kept misbehaving.
 
 Overall, a really successful day. Things I'd like to work on:
 
