@@ -1,4 +1,30 @@
-# Hackathon - Build a Back End
+# WEEK 9 HACKATHON
+
+This week we focused on learning Rest APIs. Our hackathon was focusing on the process of building the back end of a Recipe App.  We were tasked with creating the functions and route handlers - if we had time, we could support our other bootcampers and try to link up the Front-End of the app (the outline of which had already been coded for us in main.js). 
+
+I enjoyed working with Safiyah and Ahia on this hackathon today. We made sure to plan and check as we went along - lots of console.logs to make sure our functions were working exactly as expected. We started by creating the functions in recipe.js, making sure each function returned what we wanted by checking in the terminal. Once we were happy with the functions, we moved onto the route handlers and HTTPs requests.
+
+We planned our different requests, file paths, functions required, and if we were accessing the body. We felt confident with the get and post requests and managed to get quick confirmation in Thunderclient. One issue we had was how we were returning the object { success: Boolean, payload: ...} and found we'd incorrectly used string interpolation when we just wanted to return the object.
+
+app.patch took us a bit longer - eventually realised we hadn't accessed the id correctly using req.params.id (!) but happy we noticed and we moved swiftly on...! app.delete took us less time and soon we were onto trying to link up the front end.
+
+We made sure to swap roles regularly - one in the 'drivier' seat sharing their screen and the other two talking through the code and helping the driver. I felt confident today to support the other two and appreciated their help - we all had a moment of realisation in the team. Mine was {} in the res.send()! Safiyah expertly spotted the .id issue and Ahia was an expert on wrangling that pesky server that kepy misbehaving.
+
+Overall, a really successful day. Things I'd like to work on:
+
+- get the Front-End behaving as it should:
+    - hook up a delete button functionality
+    - hook up the editRecipeByID functionality
+    - create a random button generator which shows one random recipe
+- change the CSS of the front-end:
+    - Header for logo/tagline        
+
+
+_____________________________________________
+# INFO FROM THE SCHOOL OF CODE:
+_____________________________________________
+
+## Hackathon - Build a Back End
 
 You'll need to write some code to get this application running. Your server will function as an API like we've been building and also serve an HTML page.
 
