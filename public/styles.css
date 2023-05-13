@@ -3,10 +3,10 @@ body {
   font-family: "Patrick Hand", cursive;
   padding: 20px;
   color: #333;
+  font-family: "Karla", sans-serif;
 }
 
 h1 {
-  font-family: "Indie Flower", cursive;
   color: #4a4a4a;
   font-size: 3em;
   text-align: center;
@@ -37,6 +37,8 @@ form textarea {
 }
 
 form button {
+  font-family: "Karla", sans-serif;
+  font-weight: 200;
   padding: 10px 20px;
   background-color: #00897b;
   color: #fff;
@@ -67,6 +69,8 @@ form button:hover {
 }
 
 #get-recipes {
+  font-family: "Karla", sans-serif;
+  font-weight: 300;
   display: block;
   padding: 10px 20px;
   background-color: #ff5722;
@@ -116,6 +120,23 @@ form button:hover {
 
 #recipes p {
   line-height: 1.6;
+}
+
+.deleteBtn {
+  font-family: Karla, sans-serif;
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  font-size: 0.9em;
+  cursor: pointer;
+  padding: 5px 10px;
+  margin: auto;
+  display: block;
+}
+
+.deleteBtn:hover {
+  background-color: #d32f2f;
 }
 
 /* Media Queries */

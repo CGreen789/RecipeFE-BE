@@ -83,6 +83,7 @@ function createRecipeView({ id, title, ingredients, instructions, image }) {
   img.alt = title;
 
   deleteButton.innerText = "Delete";
+  deleteButton.setAttribute("class", "deleteBtn");
 
   const list = createIngredientsList(ingredients);
   article.appendChild(h2);
