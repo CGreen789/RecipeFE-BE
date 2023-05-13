@@ -13,7 +13,7 @@ We made sure to swap roles regularly - one in the 'drivier' seat sharing their s
 Overall, a really successful day. Things I'd like to work on:
 
 - get the Front-End behaving as it should:
-    - hook up a delete button functionality
+    - hook up a delete button functionality ✅ completed. Lots of help from @ajdevbox - thank you!
     - hook up the editRecipeByID functionality
     - create a random button generator which shows one random recipe
 - change the CSS of the front-end:
