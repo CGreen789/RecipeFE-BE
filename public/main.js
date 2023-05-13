@@ -6,19 +6,15 @@ const submitButton = document.querySelector("button[type='submit']");
 const ingredientButton = document.querySelector("#add-ingredient");
 const ingredientsInput = document.querySelector("#ingredients-input");
 const ingredientsList = document.querySelector("#ingredients-list");
-const deleteButton = document.querySelectorAll(".deleteBtn");
+// const deleteButton = document.querySelectorAll (".deleteBtn")
 
 ingredientButton.addEventListener("click", addIngredient);
 submitButton.addEventListener("click", handleSubmit);
 getRecipeButton.addEventListener("click", handleClick);
-// Loop through all delete buttons and add event listener
-deleteButton.forEach(function (button) {
-  button.addEventListener("click", handleDelete);
-});
+// deleteButton.addEventListener ("click", handleDelete)
 
 function addIngredient(event) {
   event.preventDefault();
-
   const li = document.createElement("li");
   const { value } = ingredientsInput;
   if (value === "") {
@@ -73,40 +69,50 @@ async function getRecipes() {
   payload.forEach(renderRecipe);
 }
 
-async function deleteRecipe() {
-  const response = await fetch(`${url}/api/recipes${id}`, { method: "DELETE" });
-  const { payload } = await response.json();
-  alert("YOU HAVE BEEN DELETED");
-}
-
-function handleDelete({ target: id }) {
-  event.preventDefault();
-  deleteRecipe(id);
-}
-
-function renderRecipe(recipe) {
-  const article = createRecipeView(recipe);
-  recipesSection.appendChild(article);
-}
-
-function createRecipeView({ title, ingredients, instructions, image }) {
+function createRecipeView({ id, title, ingredients, instructions, image }) {
+  // add id as input
   const article = document.createElement("article");
   const h2 = document.createElement("h2");
   const deleteButton = document.createElement("button");
-  deleteButton.setAttribute("class", "deleteBtn")
+
   h2.innerText = title;
   const p = document.createElement("p");
   p.innerText = instructions;
   const img = document.createElement("img");
   img.src = image;
   img.alt = title;
+
+  deleteButton.innerText = "Delete";
+
   const list = createIngredientsList(ingredients);
   article.appendChild(h2);
   article.appendChild(img);
   article.appendChild(list);
   article.appendChild(p);
   article.appendChild(deleteButton);
+
+  deleteButton.addEventListener("click", handleDeleteCard);
+
+  function handleDeleteCard(event) {
+    event.preventDefault();
+    let deleteURL = `${url}/api/recipes/${id}`;
+    let option = { method: "DELETE" };
+    deleteRecipe(deleteURL, option);
+  }
+
+  async function deleteRecipe(deleteURL, option) {
+    const response = await fetch(deleteURL, option);
+    const data = await response.json();
+    getRecipes();
+
+    // event.target.parentNode.remove();
+  }
   return article;
+}
+
+function renderRecipe(recipe) {
+  const article = createRecipeView(recipe);
+  recipesSection.appendChild(article);
 }
 
 function createIngredientsList(ingredients) {
