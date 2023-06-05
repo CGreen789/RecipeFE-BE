@@ -1,5 +1,10 @@
 # WEEK 9 HACKATHON
 
+This app allows users to keep a record of recipes. You can add to the list and delete the cards from the list.
+
+_________________________
+### Write-up for this app:
+
 This week we focused on learning Rest APIs. Our hackathon was focusing on the process of building the back end of a Recipe App.  We were tasked with creating the functions and route handlers - if we had time, we could support our other bootcampers and try to link up the Front-End of the app (the outline of which had already been coded for us in main.js). 
 
 I enjoyed working with Safiyah and Ahia on this hackathon today. We made sure to plan and check as we went along - lots of console.logs to make sure our functions were working exactly as expected. We started by creating the functions in recipe.js, making sure each function returned what we wanted by checking in the terminal. Once we were happy with the functions, we moved onto the route handlers and HTTPs requests.
