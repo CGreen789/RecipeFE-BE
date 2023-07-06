@@ -1,4 +1,4 @@
-const url = "http://localhost:3000";
+const url = "https://recipefe-be-server.onrender.com";
 
 const recipesSection = document.querySelector("#recipes");
 const getRecipeButton = document.querySelector("#get-recipes");
@@ -6,7 +6,6 @@ const submitButton = document.querySelector("button[type='submit']");
 const ingredientButton = document.querySelector("#add-ingredient");
 const ingredientsInput = document.querySelector("#ingredients-input");
 const ingredientsList = document.querySelector("#ingredients-list");
-// const deleteButton = document.querySelectorAll (".deleteBtn")
 
 ingredientButton.addEventListener("click", addIngredient);
 submitButton.addEventListener("click", handleSubmit);

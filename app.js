@@ -5,6 +5,7 @@
 // delete => deleteRecipeByID,        /api/recipes/:id    params
 
 import express from "express";
+import cors from "cors";
 
 import {
   getRecipes,
@@ -20,6 +21,17 @@ const PORT = 3000;
 app.use(express.static("public"));
 
 app.use(express.json());
+
+app.use(
+  cors({
+    origin: [
+      "http://localhost:3000",
+      "https://recipefe-be-server.onrender.com",
+      "https://recipefe-be-server.onrender.com/api/recipes",
+      "https://you-got-served-recipe-app.netlify.app/",
+    ],
+  })
+);
 
 // get all recipes
 app.get("/api/recipes", async (req, res) => {
@@ -66,5 +78,5 @@ app.delete("/api/recipes/:id", async (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server listening on port ${PORT}`);
+  console.log(`Server is running`);
 });
