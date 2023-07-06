@@ -32,11 +32,14 @@ function handleSubmit(event) {
 
 async function createRecipe() {
   console.log(gatherFormData());
-  const response = await fetch(`${url}/api/recipes`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(gatherFormData()),
-  });
+  const response = await fetch(
+    `https://recipefe-be-server.onrender.com/api/recipes`,
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(gatherFormData()),
+    }
+  );
   const data = await response.json();
   console.log(data);
 }
@@ -61,7 +64,9 @@ function handleClick(event) {
 }
 
 async function getRecipes() {
-  const response = await fetch(`${url}/api/recipes`);
+  const response = await fetch(
+    `https://recipefe-be-server.onrender.com/api/recipes`
+  );
   const { payload } = await response.json();
   recipesSection.innerHTML = "";
   console.log(payload);
@@ -95,7 +100,7 @@ function createRecipeView({ id, title, ingredients, instructions, image }) {
 
   function handleDeleteCard(event) {
     event.preventDefault();
-    let deleteURL = `${url}/api/recipes/${id}`;
+    let deleteURL = `https://recipefe-be-server.onrender.com/api/recipes/${id}`;
     let option = { method: "DELETE" };
     deleteRecipe(deleteURL, option);
   }
