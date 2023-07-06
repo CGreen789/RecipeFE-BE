@@ -2,6 +2,8 @@
 
 This app allows users to keep a record of recipes. You can add to the list and delete the cards from the list.
 
+You can view the site [here](https://you-got-served-recipe-app.netlify.app/).
+
 _________________________
 ### Write-up for this app:
 
