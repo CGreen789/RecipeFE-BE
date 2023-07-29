@@ -25,7 +25,7 @@ Overall, a really successful day. Things I'd like to work on:
     - create a random button generator which shows one random recipe
 - change the CSS of the front-end:
     - Header for logo/tagline        
-
+- add auth so users can share their recipe cards, but only they can edit and delete
 
 _____________________________________________
 # INFO FROM THE SCHOOL OF CODE:
